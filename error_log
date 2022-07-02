@@ -1,0 +1,170 @@
+[01-Sep-2021 13:01:20 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.3.0". You are running 7.2.34. in /home/sparkdeliverycom/public_html/vendor/composer/platform_check.php on line 24
+[27-Nov-2021 12:38:20 Asia/Dhaka] PHP Fatal error:  Cannot use App\Merchantcharge as Merchantcharge because the name is already in use in /home/zuriexpr/public_html/app/Http/Controllers/Editor/ParcelManageController.php on line 20
+[27-Nov-2021 12:40:10 Asia/Dhaka] PHP Fatal error:  Cannot use App\Merchantcharge as Merchantcharge because the name is already in use in /home/zuriexpr/public_html/app/Http/Controllers/Editor/ParcelManageController.php on line 20
+[04-Apr-2022 10:08:24 Asia/Dhaka] PHP Fatal error:  Uncaught ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php:853
+Stack trace:
+#0 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(853): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError()
+#1 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(816): Illuminate\Container\Container->resolveDependencies()
+#2 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#3 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(265): Illuminate\Container\Container->resolve()
+#4 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(785): Illuminate\Container\Container->Illuminate\Container\{closure}()
+#5 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#6 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(615): Illuminate\Container\Container->resolve()
+#7 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(767): Illuminate\Container\Container->make()
+#8 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(170): Illuminate\Foundation\Application->make()
+#9 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(123): Illuminate\Foundation\Bootstrap\HandleExceptions->getExceptionHandler()
+#10 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(100): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#11 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#12 {main}
+  thrown in /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 853
+[04-Apr-2022 10:08:24 Asia/Dhaka] PHP Fatal error:  Uncaught ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php:853
+Stack trace:
+#0 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(853): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError()
+#1 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(816): Illuminate\Container\Container->resolveDependencies()
+#2 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#3 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(265): Illuminate\Container\Container->resolve()
+#4 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(785): Illuminate\Container\Container->Illuminate\Container\{closure}()
+#5 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#6 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(615): Illuminate\Container\Container->resolve()
+#7 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(767): Illuminate\Container\Container->make()
+#8 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(170): Illuminate\Foundation\Application->make()
+#9 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(123): Illuminate\Foundation\Bootstrap\HandleExceptions->getExceptionHandler()
+#10 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(100): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#11 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#12 {main}
+  thrown in /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 853
+[04-Apr-2022 10:08:24 Asia/Dhaka] PHP Fatal error:  Uncaught ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php:853
+Stack trace:
+#0 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(853): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError()
+#1 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(816): Illuminate\Container\Container->resolveDependencies()
+#2 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#3 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(265): Illuminate\Container\Container->resolve()
+#4 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(785): Illuminate\Container\Container->Illuminate\Container\{closure}()
+#5 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#6 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(615): Illuminate\Container\Container->resolve()
+#7 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(767): Illuminate\Container\Container->make()
+#8 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(170): Illuminate\Foundation\Application->make()
+#9 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(123): Illuminate\Foundation\Bootstrap\HandleExceptions->getExceptionHandler()
+#10 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(100): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#11 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(134): Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#12 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#13 {main}
+  thrown in /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 853
+[04-Apr-2022 10:08:24 Asia/Dhaka] PHP Fatal error:  Uncaught ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php:853
+Stack trace:
+#0 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(853): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError()
+#1 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(816): Illuminate\Container\Container->resolveDependencies()
+#2 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#3 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(265): Illuminate\Container\Container->resolve()
+#4 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(785): Illuminate\Container\Container->Illuminate\Container\{closure}()
+#5 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#6 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(615): Illuminate\Container\Container->resolve()
+#7 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(767): Illuminate\Container\Container->make()
+#8 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(170): Illuminate\Foundation\Application->make()
+#9 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(123): Illuminate\Foundation\Bootstrap\HandleExceptions->getExceptionHandler()
+#10 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(100): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#11 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(134): Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#12 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#13 {main}
+  thrown in /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 853
+[04-Apr-2022 10:10:18 Asia/Dhaka] PHP Fatal error:  Uncaught ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php:853
+Stack trace:
+#0 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(853): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError()
+#1 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(816): Illuminate\Container\Container->resolveDependencies()
+#2 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#3 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(265): Illuminate\Container\Container->resolve()
+#4 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(785): Illuminate\Container\Container->Illuminate\Container\{closure}()
+#5 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#6 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(615): Illuminate\Container\Container->resolve()
+#7 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(767): Illuminate\Container\Container->make()
+#8 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(170): Illuminate\Foundation\Application->make()
+#9 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(123): Illuminate\Foundation\Bootstrap\HandleExceptions->getExceptionHandler()
+#10 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(100): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#11 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#12 {main}
+  thrown in /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 853
+[04-Apr-2022 10:10:18 Asia/Dhaka] PHP Fatal error:  Uncaught ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php:853
+Stack trace:
+#0 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(853): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError()
+#1 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(816): Illuminate\Container\Container->resolveDependencies()
+#2 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#3 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(265): Illuminate\Container\Container->resolve()
+#4 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(785): Illuminate\Container\Container->Illuminate\Container\{closure}()
+#5 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#6 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(615): Illuminate\Container\Container->resolve()
+#7 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(767): Illuminate\Container\Container->make()
+#8 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(170): Illuminate\Foundation\Application->make()
+#9 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(123): Illuminate\Foundation\Bootstrap\HandleExceptions->getExceptionHandler()
+#10 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(100): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#11 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(134): Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#12 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#13 {main}
+  thrown in /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 853
+[04-Apr-2022 10:10:50 Asia/Dhaka] PHP Fatal error:  Uncaught ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php:853
+Stack trace:
+#0 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(853): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError()
+#1 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(816): Illuminate\Container\Container->resolveDependencies()
+#2 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#3 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(265): Illuminate\Container\Container->resolve()
+#4 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(785): Illuminate\Container\Container->Illuminate\Container\{closure}()
+#5 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#6 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(615): Illuminate\Container\Container->resolve()
+#7 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(767): Illuminate\Container\Container->make()
+#8 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(170): Illuminate\Foundation\Application->make()
+#9 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(123): Illuminate\Foundation\Bootstrap\HandleExceptions->getExceptionHandler()
+#10 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(100): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#11 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#12 {main}
+  thrown in /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 853
+[04-Apr-2022 10:10:50 Asia/Dhaka] PHP Fatal error:  Uncaught ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php:853
+Stack trace:
+#0 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(853): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError()
+#1 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(816): Illuminate\Container\Container->resolveDependencies()
+#2 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#3 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(265): Illuminate\Container\Container->resolve()
+#4 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(785): Illuminate\Container\Container->Illuminate\Container\{closure}()
+#5 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#6 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(615): Illuminate\Container\Container->resolve()
+#7 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(767): Illuminate\Container\Container->make()
+#8 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(170): Illuminate\Foundation\Application->make()
+#9 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(123): Illuminate\Foundation\Bootstrap\HandleExceptions->getExceptionHandler()
+#10 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(100): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#11 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(134): Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#12 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#13 {main}
+  thrown in /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 853
+[04-Apr-2022 10:11:13 Asia/Dhaka] PHP Fatal error:  Uncaught ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php:853
+Stack trace:
+#0 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(853): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError()
+#1 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(816): Illuminate\Container\Container->resolveDependencies()
+#2 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#3 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(265): Illuminate\Container\Container->resolve()
+#4 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(785): Illuminate\Container\Container->Illuminate\Container\{closure}()
+#5 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#6 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(615): Illuminate\Container\Container->resolve()
+#7 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(767): Illuminate\Container\Container->make()
+#8 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(170): Illuminate\Foundation\Application->make()
+#9 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(123): Illuminate\Foundation\Bootstrap\HandleExceptions->getExceptionHandler()
+#10 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(100): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#11 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#12 {main}
+  thrown in /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 853
+[04-Apr-2022 10:11:13 Asia/Dhaka] PHP Fatal error:  Uncaught ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php:853
+Stack trace:
+#0 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(853): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError()
+#1 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(816): Illuminate\Container\Container->resolveDependencies()
+#2 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#3 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(265): Illuminate\Container\Container->resolve()
+#4 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(785): Illuminate\Container\Container->Illuminate\Container\{closure}()
+#5 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#6 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php(615): Illuminate\Container\Container->resolve()
+#7 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(767): Illuminate\Container\Container->make()
+#8 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(170): Illuminate\Foundation\Application->make()
+#9 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(123): Illuminate\Foundation\Bootstrap\HandleExceptions->getExceptionHandler()
+#10 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(100): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#11 /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(134): Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#12 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#13 {main}
+  thrown in /home/quicksoft/tubacourier.com/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 853
+[04-Apr-2022 04:13:21 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.3.0". You are running 7.2.34. in /home/quicksoft/tubacourier.com/vendor/composer/platform_check.php on line 24
+[26-Apr-2022 12:12:46 Asia/Dhaka] PHP Fatal error:  Trait 'Illuminate\Database\Eloquent\Factories\HasFactory' not found in /home/quicksoft/tubacourier.com/app/Page.php on line 9
