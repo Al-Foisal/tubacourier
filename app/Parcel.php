@@ -23,4 +23,8 @@ class Parcel extends Model {
         return $this->belongsTo(Nearestzone::class, 'reciveZone', 'id');
     }
 
+    public function PT() {
+        return $this->belongsTo(Parceltype::class, 'status', 'id');
+    }
+
 }

@@ -723,6 +723,12 @@
                                             <p>Old Payment({{ $old }})</p>
                                         </a>
                                     </li>
+                                    <li class="nav-item">
+                                        <a href="{{ url('/editor/parcel/payment/merchant-payment') }}" class="nav-link">
+                                            <i class="fas fa-cicle-o"></i>
+                                            <p>Merchant Payment</p>
+                                        </a>
+                                    </li>
                                 </ul>
                             </li>
 

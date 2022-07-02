@@ -373,20 +373,18 @@ class ParcelManageController extends Controller {
         return view('backEnd.parcel.old-payment', compact('show_data'));
     }
 
-    public function submitPayment(Request $request) {
+    public function merchantPayment() {
+        $data              = [];
+        $data['show_data'] = Merchant::select(['id', 'companyName', 'paymentMethod'])->paginate(50);
 
-        if ($request->parcel_id == null) {
-            Toastr::error('message', 'No parcel selected');
+        return view('backEnd.parcel.merchant-payment', $data);
+    }
 
-            return redirect()->back();
-        }
+    public function merchantPaymentDetails($id) {
+        $data              = [];
+        $data['merchant'] = Merchant::where('id',$id)->with('parcels')->first();
 
-        $parcel = Parcel::whereIn('id', $request->parcel_id)->update(['agentPaystatus' => 1]);
-
-        Toastr::success('message', 'Parcel payment updated');
-
-        return redirect()->back();
-
+        return view('backEnd.parcel.mercant-payment-details', $data);
     }
 
     public function allparcel(Request $request) {
@@ -947,6 +945,20 @@ class ParcelManageController extends Controller {
         $delivery  = Deliverycharge::where('status', 1)->get();
 
         return view('backEnd.addparcel.create', compact('merchants', 'delivery'));
+    }
+
+    public function merchantSubmitPayment(Request $request)
+    {
+        if ($request->parcel_id == null) {
+            Toastr::error('message', 'No parcel selected');
+
+            return redirect()->back();
+        }
+        $parcel = Parcel::whereIn('id', $request->parcel_id)->where('merchantId',$request->merchant_id)->update(['merchantpayStatus' => 2]);
+
+        Toastr::success('message', 'Parcel payment updated');
+
+        return redirect()->back();
     }
 
     // rrr

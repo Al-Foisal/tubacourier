@@ -354,7 +354,9 @@ Route::group(['as' => 'editor.', 'prefix' => 'editor', 'namespace' => 'Editor', 
     //payment 
     Route::get('/parcel/payment/todays-payment', 'ParcelManageController@todaysPayment');
     Route::get('/parcel/payment/old-payment', 'ParcelManageController@oldPayment');
-    Route::post('/parcel/payment/submit-payment', 'ParcelManageController@SubmitPayment');
+    Route::get('/parcel/payment/merchant-payment', 'ParcelManageController@merchantPayment');
+    Route::get('/merchant/payment/merchant-payment-details/{id}', 'ParcelManageController@merchantPaymentDetails')->name('merchantPaymentDetails');
+    Route::post('/merchant/payment/submit-payment', 'ParcelManageController@merchantSubmitPayment');
 
     // parcel Manage
     Route::get('/new/pickup', 'PickupManageController@newpickup');
