@@ -642,6 +642,45 @@
                         @endif
                         <!-- nav item end -->
 
+                        @if (Auth::user()->role_id <= 4)
+                            <li class="nav-item has-treeview">
+
+
+
+                                <a href="#" class="nav-link">
+                                    <i class="fa fa-money"></i>
+                                    <p>
+                                        Accounts
+                                        <i class="right fa fa-angle-left"></i>
+                                    </p>
+                                </a>
+
+
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="{{ route('editor.ec.index') }}"
+                                            class="nav-link">&nbsp;&nbsp;
+                                            <i class="fas fa-users-cog"></i>&nbsp;
+                                            <p>Expense Category</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{ route('editor.e.index') }}"
+                                            class="nav-link">&nbsp;&nbsp;
+                                            <i class="fas fa-users"></i>&nbsp;
+                                            <p>Expense</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{ route('editor.e.revenue') }}" class="nav-link">&nbsp;&nbsp;
+                                            <i class="fas fa-user-friends"></i>&nbsp;
+                                            <p>Revenue</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        @endif
+
 
 
                         @if (Auth::user()->role_id <= 4)

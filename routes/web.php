@@ -312,6 +312,23 @@ Route::group(['as' => 'editor.', 'prefix' => 'editor', 'namespace' => 'Editor', 
     // editor dashboard
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
+    //expense category
+    Route::get('/ec/index', 'ExpenseCategoryController@index')->name('ec.index');
+    Route::post('/ec/store', 'ExpenseCategoryController@store')->name('ec.store');
+    Route::get('/ec/edit/{id}', 'ExpenseCategoryController@edit')->name('ec.edit');
+    Route::patch('/ec/update/{id}', 'ExpenseCategoryController@update')->name('ec.update');
+
+    //expense
+    Route::get('/e/index', 'ExpenseController@index')->name('e.index');
+    Route::get('/e/create', 'ExpenseController@create')->name('e.create');
+    Route::post('/e/store', 'ExpenseController@store')->name('e.store');
+    Route::get('/e/edit/{id}', 'ExpenseController@edit')->name('e.edit');
+    Route::patch('/e/update/{id}', 'ExpenseController@update')->name('e.update');
+    Route::delete('/e/delete/{id}', 'ExpenseController@delete')->name('e.delete');
+
+    //revenue
+    Route::get('/e/revenue', 'ExpenseController@revenue')->name('e.revenue');
+
     // Delivery Man Route
     Route::get('deliveryman/add', 'DeliverymanManageController@add');
     Route::post('deliveryman/save', 'DeliverymanManageController@save');
@@ -351,7 +368,7 @@ Route::group(['as' => 'editor.', 'prefix' => 'editor', 'namespace' => 'Editor', 
     Route::post('/parcel/parcel-resend', 'ParcelManageController@parcel_resend');
     Route::post('/parcel/parcel-verify', 'ParcelManageController@parcel_verify');
 
-    //payment 
+    //payment
     Route::get('/parcel/payment/todays-payment', 'ParcelManageController@todaysPayment');
     Route::get('/parcel/payment/old-payment', 'ParcelManageController@oldPayment');
     Route::get('/parcel/payment/merchant-payment', 'ParcelManageController@merchantPayment');
