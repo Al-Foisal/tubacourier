@@ -326,6 +326,9 @@ Route::group(['as' => 'editor.', 'prefix' => 'editor', 'namespace' => 'Editor', 
     Route::patch('/e/update/{id}', 'ExpenseController@update')->name('e.update');
     Route::delete('/e/delete/{id}', 'ExpenseController@delete')->name('e.delete');
 
+    //income
+    Route::get('/e/income', 'ExpenseController@income')->name('e.income');
+
     //revenue
     Route::get('/e/revenue', 'ExpenseController@revenue')->name('e.revenue');
 

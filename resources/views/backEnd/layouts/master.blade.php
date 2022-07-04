@@ -672,6 +672,12 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
+                                        <a href="{{ route('editor.e.income') }}" class="nav-link">&nbsp;&nbsp;
+                                            <i class="fas fa-user-friends"></i>&nbsp;
+                                            <p>Income</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
                                         <a href="{{ route('editor.e.revenue') }}" class="nav-link">&nbsp;&nbsp;
                                             <i class="fas fa-user-friends"></i>&nbsp;
                                             <p>Revenue</p>
