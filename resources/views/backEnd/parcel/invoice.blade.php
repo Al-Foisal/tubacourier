@@ -136,9 +136,9 @@
     <body>
         <!-- Modal content-->
 
-        @foreach ($parcel as $show_data)
+        {{-- @foreach ($parcel as $show_data) --}}
             <div class="modal-content">
-                <div class="modal-body printSection" style="width: 50rem;height:118.5vh;">
+                <div class="modal-body printSection" style="width: 50rem;height:100vh;">
                     <div class="bar-code" style="width:50px;float: right">
                         <?php echo DNS2D::getBarcodeHTML(url('/') . '/track/parcel/' . $show_data->trackingCode, 'QRCODE', 2, 2); ?>
                     </div>
@@ -212,7 +212,7 @@
                     </div>
                 </div>
             </div>
-        @endforeach
+        {{-- @endforeach --}}
         <script>
             function myFunction2() {
                 window.print();
