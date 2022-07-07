@@ -659,28 +659,61 @@
                                 <ul class="nav nav-treeview">
                                     <li class="nav-item">
                                         <a href="{{ route('editor.ec.index') }}"
-                                            class="nav-link">&nbsp;&nbsp;
-                                            <i class="fas fa-users-cog"></i>&nbsp;
+                                            class="nav-link">                                            
                                             <p>Expense Category</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="{{ route('editor.e.index') }}"
-                                            class="nav-link">&nbsp;&nbsp;
-                                            <i class="fas fa-users"></i>&nbsp;
+                                            class="nav-link">                                            
                                             <p>Expense</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{{ route('editor.e.income') }}" class="nav-link">&nbsp;&nbsp;
-                                            <i class="fas fa-user-friends"></i>&nbsp;
+                                        <a href="{{ route('editor.e.income') }}" class="nav-link">                                            
                                             <p>Income</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{{ route('editor.e.revenue') }}" class="nav-link">&nbsp;&nbsp;
-                                            <i class="fas fa-user-friends"></i>&nbsp;
+                                        <a href="{{ route('editor.e.revenue') }}" class="nav-link">
                                             <p>Revenue</p>
+                                        </a>
+                                    </li>
+
+                                    {{-- payment --}}
+                                    @php
+                                        $today = DB::table('parcels')
+                                            ->where('status', 4)
+                                            ->where('deliverymanPaystatus', 1)
+                                            ->where('deliverymanId', '!=', null)
+                                            ->where('agentId', '!=', null)
+                                            ->whereDate('updated_at', today())
+                                            ->orderBy('id', 'desc')
+                                            ->count();
+                                        
+                                        $old = DB::table('parcels')
+                                            ->where('status', 4)
+                                            ->where('deliverymanPaystatus', 1)
+                                            ->where('deliverymanId', '!=', null)
+                                            ->where('agentId', '!=', null)
+                                            ->whereDate('updated_at', '<', today())
+                                            ->orderBy('id', 'desc')
+                                            ->count();
+                                    @endphp
+                                    <li class="nav-item">
+                                        <a href="{{ url('/editor/parcel/payment/todays-payment') }}"
+                                            class="nav-link">
+                                            <p>Todays Payment({{ $today }})</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{ url('/editor/parcel/payment/old-payment') }}" class="nav-link">
+                                            <p>Old Payment({{ $old }})</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{ url('/editor/parcel/payment/merchant-payment') }}" class="nav-link">
+                                            <p>Merchant Payment</p>
                                         </a>
                                     </li>
                                 </ul>
@@ -727,55 +760,6 @@
                             </li>
                             <!-- nav item end -->
 
-                            <li class="nav-item has-treeview">
-                                <a href="#" class="nav-link">
-                                    <i class="fas fa-gift"></i>
-                                    <p>
-                                        Payment
-                                        <i class="right fa fa-angle-left"></i>
-                                    </p>
-                                </a>
-                                <ul class="nav nav-treeview">
-                                    @php
-                                        $today = DB::table('parcels')
-                                            ->where('status', 4)
-                                            ->where('deliverymanPaystatus', 1)
-                                            ->where('deliverymanId', '!=', null)
-                                            ->where('agentId', '!=', null)
-                                            ->whereDate('updated_at', today())
-                                            ->orderBy('id', 'desc')
-                                            ->count();
-                                        
-                                        $old = DB::table('parcels')
-                                            ->where('status', 4)
-                                            ->where('deliverymanPaystatus', 1)
-                                            ->where('deliverymanId', '!=', null)
-                                            ->where('agentId', '!=', null)
-                                            ->whereDate('updated_at', '<', today())
-                                            ->orderBy('id', 'desc')
-                                            ->count();
-                                    @endphp
-                                    <li class="nav-item">
-                                        <a href="{{ url('/editor/parcel/payment/todays-payment') }}"
-                                            class="nav-link">
-                                            <i class="fas fa-cicle-o"></i>
-                                            <p>Todays Payment({{ $today }})</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="{{ url('/editor/parcel/payment/old-payment') }}" class="nav-link">
-                                            <i class="fas fa-cicle-o"></i>
-                                            <p>Old Payment({{ $old }})</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="{{ url('/editor/parcel/payment/merchant-payment') }}" class="nav-link">
-                                            <i class="fas fa-cicle-o"></i>
-                                            <p>Merchant Payment</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
 
 
                             <!-- nav item end -->
