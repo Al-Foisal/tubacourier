@@ -25,7 +25,7 @@
             min-height: 0;
             padding: 1rem;
             position: relative;
-            width: 78px;
+            width: 62px;
         }
 
         .info-box-border-0 {

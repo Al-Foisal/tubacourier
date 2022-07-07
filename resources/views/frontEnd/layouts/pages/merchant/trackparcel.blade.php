@@ -42,8 +42,20 @@
 								<h6><strong>{{$trackparcel->recipientPhone}}</strong></h6>
 							</div>
 							<div class="item">
+								<p>Division :</p>
+								<h6><strong>{{$trackparcel->division->name??''}}</strong></h6>
+							</div>
+							<div class="item">
+								<p>District :</p>
+								<h6><strong>{{$trackparcel->district->name??''}}</strong></h6>
+							</div>
+							<div class="item">
 								<p>Area :</p>
-								<h6><strong>{{$trackparcel->zonename}}</strong></h6>
+								<h6><strong>{{$trackparcel->area->name??''}}</strong></h6>
+							</div>
+							<div class="item">
+								<p>Union :</p>
+								<h6><strong>{{$trackparcel->union->zonename??''}}</strong></h6>
 							</div>
 							<div class="item">
 								<p>Weight :</p>

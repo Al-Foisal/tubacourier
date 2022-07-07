@@ -27,4 +27,20 @@ class Parcel extends Model {
         return $this->belongsTo(Parceltype::class, 'status', 'id');
     }
 
+    public function division() {
+        return $this->belongsTo(Division::class);
+    }
+
+    public function district() {
+        return $this->belongsTo(UpDistrict::class, 'up_district_id', 'id');
+    }
+
+    public function area() {
+        return $this->belongsTo(Area::class);
+    }
+
+    public function union() {
+        return $this->belongsTo(Nearestzone::class, 'reciveZone', 'id');
+    }
+
 }

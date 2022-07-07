@@ -370,6 +370,9 @@ class MerchantController extends Controller {
         $store_parcel->note             = $request->note;
         $store_parcel->deliveryCharge   = $deliverycharge;
         $store_parcel->codCharge        = $codcharge;
+        $store_parcel->division_id      = $request->division_id;
+        $store_parcel->up_district_id   = $request->district_id;
+        $store_parcel->area_id          = $request->area_id;
         $store_parcel->reciveZone       = $request->reciveZone;
         $store_parcel->productPrice     = $request->productPrice;
         $store_parcel->merchantAmount   = ($request->cod) - ($deliverycharge + $codcharge);
@@ -451,44 +454,33 @@ class MerchantController extends Controller {
         $filter = $request->filter_id;
 
         if ($request->trackId != NULL) {
-            $allparcel = DB::table('parcels')
-                ->join('merchants', 'merchants.id', '=', 'parcels.merchantId')
-                ->where('parcels.merchantId', Session::get('merchantId'))
-                ->where('parcels.trackingCode', $request->trackId)
-                ->select('parcels.*', 'merchants.firstName', 'merchants.lastName', 'merchants.phoneNumber', 'merchants.emailAddress', 'merchants.companyName', 'merchants.status as mstatus', 'merchants.id as mid')
+            $allparcel = Parcel::where('merchantId', Session::get('merchantId'))
+                ->where('trackingCode', $request->trackId)
+                ->with('merchant', 'division', 'district', 'area', 'union')
                 ->orderBy('id', 'DESC')
                 ->get();
         } elseif ($request->phoneNumber != NULL) {
-            $allparcel = DB::table('parcels')
-                ->join('merchants', 'merchants.id', '=', 'parcels.merchantId')
-                ->where('parcels.merchantId', Session::get('merchantId'))
-                ->where('parcels.recipientPhone', $request->phoneNumber)
-                ->select('parcels.*', 'merchants.firstName', 'merchants.lastName', 'merchants.phoneNumber', 'merchants.emailAddress', 'merchants.companyName', 'merchants.status as mstatus', 'merchants.id as mid')
+            $allparcel = Parcel::where('merchantId', Session::get('merchantId'))
+                ->where('recipientPhone', $request->phoneNumber)
+                ->with('merchant', 'division', 'district', 'area', 'union')
                 ->orderBy('id', 'DESC')
                 ->get();
         } elseif ($request->startDate != NULL && $request->endDate != NULL) {
-            $allparcel = DB::table('parcels')
-                ->join('merchants', 'merchants.id', '=', 'parcels.merchantId')
-                ->where('parcels.merchantId', Session::get('merchantId'))
-                ->whereBetween('parcels.created_at', [$request->startDate, $request->endDate])
-                ->select('parcels.*', 'merchants.firstName', 'merchants.lastName', 'merchants.phoneNumber', 'merchants.emailAddress', 'merchants.companyName', 'merchants.status as mstatus', 'merchants.id as mid')
+            $allparcel = Parcel::where('merchantId', Session::get('merchantId'))
+                ->whereBetween('created_at', [$request->startDate, $request->endDate])
+                ->with('merchant', 'division', 'district', 'area', 'union')
                 ->orderBy('id', 'DESC')
                 ->get();
         } elseif ($request->phoneNumber != NULL || $request->phoneNumber != NULL && $request->startDate != NULL && $request->endDate != NULL) {
-            $allparcel = DB::table('parcels')
-                ->join('merchants', 'merchants.id', '=', 'parcels.merchantId')
-                ->where('parcels.merchantId', Session::get('merchantId'))
-                ->where('parcels.recipientPhone', $request->phoneNumber)
-                ->whereBetween('parcels.created_at', [$request->startDate, $request->endDate])
-                ->select('parcels.*', 'merchants.firstName', 'merchants.lastName', 'merchants.phoneNumber', 'merchants.emailAddress', 'merchants.companyName', 'merchants.status as mstatus', 'merchants.id as mid')
+            $allparcel = Parcel::where('merchantId', Session::get('merchantId'))
+                ->where('recipientPhone', $request->phoneNumber)
+                ->whereBetween('created_at', [$request->startDate, $request->endDate])
+                ->with('merchant', 'division', 'district', 'area', 'union')
                 ->orderBy('id', 'DESC')
                 ->get();
         } else {
-            $allparcel = DB::table('parcels')
-                ->join('merchants', 'merchants.id', '=', 'parcels.merchantId')
-                ->where('parcels.merchantId', Session::get('merchantId'))
-                ->select('parcels.*', 'merchants.firstName', 'merchants.lastName', 'merchants.phoneNumber', 'merchants.emailAddress', 'merchants.companyName', 'merchants.status as mstatus', 'merchants.id as mid')
-                ->orderBy('id', 'DESC')
+            $allparcel = Parcel::where('merchantId', Session::get('merchantId'))
+                ->with('merchant', 'division', 'district', 'area', 'union')
                 ->get();
         }
 
@@ -497,11 +489,9 @@ class MerchantController extends Controller {
 
     public function parcelstatus($slug) {
         $parceltype = Parceltype::where('slug', $slug)->first();
-        $allparcel  = DB::table('parcels')
-            ->join('merchants', 'merchants.id', '=', 'parcels.merchantId')
-            ->where('parcels.merchantId', Session::get('merchantId'))
-            ->where('parcels.status', $parceltype->id)
-            ->select('parcels.*', 'merchants.firstName', 'merchants.lastName', 'merchants.phoneNumber', 'merchants.emailAddress', 'merchants.companyName', 'merchants.status as mstatus', 'merchants.id as mid')
+        $allparcel  = Parcel::where('merchantId', Session::get('merchantId'))
+            ->where('status', $parceltype->id)
+            ->with('merchant', 'division', 'district', 'area', 'union')
             ->orderBy('id', 'DESC')
             ->get();
 
@@ -509,10 +499,8 @@ class MerchantController extends Controller {
     }
 
     public function parceldetails($id) {
-        $parceldetails = DB::table('parcels')
-            ->join('nearestzones', 'parcels.reciveZone', '=', 'nearestzones.id')
-            ->where(['parcels.merchantId' => Session::get('merchantId'), 'parcels.id' => $id])
-            ->select('parcels.*', 'nearestzones.zonename')
+        $parceldetails = Parcel::where(['merchantId' => Session::get('merchantId'), 'id' => $id])
+            ->with('merchant', 'division', 'district', 'area', 'union')
             ->first();
         $trackInfos = Parcelnote::where('parcelId', $id)->orderBy('id', 'ASC')->with('notes')->get();
 
@@ -520,12 +508,9 @@ class MerchantController extends Controller {
     }
 
     public function invoice($id) {
-        $show_data = DB::table('parcels')
-            ->join('merchants', 'merchants.id', '=', 'parcels.merchantId')
-            ->where(['parcels.merchantId' => Session::get('merchantId'), 'parcels.id' => $id])
-            ->join('nearestzones', 'parcels.reciveZone', '=', 'nearestzones.id')
+        $show_data = Parcel::where('merchantId', Session::get('merchantId'))
             ->where('parcels.id', $id)
-            ->select('parcels.*', 'nearestzones.zonename', 'merchants.companyName', 'merchants.phoneNumber', 'merchants.emailAddress')
+            ->with('merchant', 'division', 'district', 'area', 'union')
             ->first();
 
         if ($show_data != NULL) {
@@ -593,6 +578,9 @@ class MerchantController extends Controller {
         $update_parcel->recipientPhone   = $request->phonenumber;
         $update_parcel->productWeight    = $weight;
         $update_parcel->note             = $request->note;
+        $update_parcel->division_id      = $request->division_id;
+        $update_parcel->up_district_id   = $request->district_id;
+        $update_parcel->area_id          = $request->area_id;
         $update_parcel->reciveZone       = $request->reciveZone;
         $update_parcel->deliveryCharge   = $deliverycharge;
         $update_parcel->codCharge        = $codcharge;
@@ -730,10 +718,8 @@ class MerchantController extends Controller {
     }
 
     public function parceltrack(Request $request) {
-        $trackparcel = DB::table('parcels')
-            ->join('nearestzones', 'parcels.reciveZone', '=', 'nearestzones.id')
-            ->where('parcels.trackingCode', 'LIKE', '%' . $request->trackid . "%")
-            ->select('parcels.*', 'nearestzones.zonename')
+        $trackparcel = Parcel::where('trackingCode', 'LIKE', '%' . $request->trackid . "%")
+            ->with('merchant', 'division', 'district', 'area', 'union')
             ->orderBy('id', 'DESC')
             ->first();
 
