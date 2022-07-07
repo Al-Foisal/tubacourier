@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="{{ asset('frontEnd') }}/css/merchant.css" type="text/css" media="all" />
     <link rel="stylesheet" href="{{ asset('frontEnd') }}/css/swiper-menu.css" type="text/css" media="all" />
     <link rel="stylesheet" href="{{ asset('backEnd/') }}/dist/css/toastr.min.css">
+    <!-- select2 -->
+    <link rel="stylesheet" href="{{ asset('backEnd/') }}/plugins/select2/css/select2.min.css">
     <!-- datatable -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.2/css/buttons.bootstrap4.min.css">
@@ -341,8 +343,15 @@
     <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.colVis.min.js "></script>
     <script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js"></script>
+    <!-- Select2 -->
+    <script src="{{ asset('backEnd/') }}/plugins/select2/js/select2.full.min.js"></script>
 
     <script>
+        //Initialize Select2 Elements
+        $('.select2').select2({
+            width: '100%'
+        });
+
         function calculate_result() {
             $.ajax({
                 type: "GET",
